@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="/static/style.css"  type="text/css" rel="stylesheet" />
+</head>
+<body>
+<header>
+	
+	<center><h1>SI FORM </h1></center>
+</header>	
+<section>
+	<div style="padding-top:50px;padding-left: 200px; ">
+  <form action="home" method="post">
+  	{% csrf_token  %}
+    <input type="number" name="txtp" placeholder="Enter first number" required="" />
+    <br><br>
+    <input type="number" name="txtr" placeholder="Enter second number" required="" />
+    <br>
+     <br>
+    <input type="submit" name="btnsubmit" value="+" />
+     <br>
+      <br>
+    <input type="submit" name="btnsubmit" value="-" />
+     <br>
+      <br>
+    <input type="submit" name="btnsubmit" value="*" />
+  </form>
+   {{res}}
+</div>
+  </section>	
+  <footer></footer>
+</body>
+</html>

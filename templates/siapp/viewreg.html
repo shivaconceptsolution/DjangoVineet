@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Student Course Details </h1>	
+<table border="1" cellspacing="0" cellpadding="0" width="600">
+	<tr><th>ID</th><th>Advance Course</th><th>Basic Course</th><th>Country</th><th>State</th><th>Message</th></tr>
+{% for data in res %}
+<tr>
+	<td>{{data.id}}</td>
+<td>{{data.adcourse}} </td><td> {{data.basiccourse}}</td><td> {{data.countryname}}</td><td> {{data.statename}}</td><td>{{data.message}}</td><td><a href="findcourse?q={{data.id}}">Edit</a></td><td><a href="deletecourse?q={{data.id}}">Delete</a></td></tr>
+{% endfor %}
+</table>
+<a href="reg">Back to add course details</a>
+</body>
+</html>

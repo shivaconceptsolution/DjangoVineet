@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="courseupdate" method="post">
+  {% csrf_token %}
+  <input type="text" name="txtcourseid" value="{{res.id}}" readonly="true" />
+  <br><br>
+  <input type="text" name="txtadcourse" value="{{res.adcourse}}" />
+  <br><br>
+  <input type="text" name="txtbasiccourse" value="{{res.basiccourse}}" />
+  <br><br>
+  <input type="text" name="txtcountry" value="{{res.countryname}}" />
+  <br><br>
+  <input type="text" name="txtstate" value="{{res.statename}}" />
+  <br><br>
+  <input type="text" name="txtmessage" value="{{res.message}}" />
+  <br><br>
+  <input type="submit" name="btnsubmit" value="update" />
+</form>
+</body>
+</html>
